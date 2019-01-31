@@ -88,13 +88,9 @@ class AboutPage extends React.Component {
                         <p className={classes.textCenter2}>
                           Roles:
                           <br/>
-                          Senior Frontend Developer: Marco.
+                           Frontend Developers: Marco, Naz, Marina
                           <br/>
-                          Frontend Developers: Naz, Marina
-                          <br/>
-                          Senior Backend Developer: Galex.
-                          <br/>
-                          Backend Developers: Farzaneh, Josh.
+                           Backend Developers: Galex, Farzaneh, Josh.
                           <br/>
                           Product Management: Consensus.
                       </p>
