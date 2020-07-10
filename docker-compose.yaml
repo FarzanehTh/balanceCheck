@@ -16,7 +16,7 @@ services:
       - "8000:8000"
     command: >
       bash -c "src/wait-for-it.sh db:5432 &&
-      python src/manage.py migrate &&
+      python src/manage.py migrate --run-syncdb &&
       cd src/ &&
       gunicorn root.wsgi -b 0.0.0.0:8000"
     depends_on:

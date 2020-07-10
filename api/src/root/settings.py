@@ -25,7 +25,7 @@ SECRET_KEY = '@ywa@@%0#k68^@s6=^hzq$7igc6s4a#svzhw163og7!svh^uq^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
+    'six'
 ]
 
 MIDDLEWARE = [
@@ -82,22 +83,22 @@ WSGI_APPLICATION = 'root.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'postgres',
-    #     'USER': 'postgres',
-    #     'HOST': 'db',
-    #     'PORT': 5432,
-    # },
-    # Uncomment sqlite for testing
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'sqlite3.db',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432,
+    },
+    # Uncomment sqlite for testing
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+    #     'NAME': 'sqlite3.db',                      # Or path to database file if using sqlite3.
+    #     'USER': '',                      # Not used with sqlite3.
+    #     'PASSWORD': '',                  # Not used with sqlite3.
+    #     'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+    #     'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    # }
 }
 
 
